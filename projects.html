@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cabinet Dreams — Projects</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-gradient"></div>
+  <div id="particles"></div>
+
+  <header class="site-header">
+    <a class="logo" href="index.html" aria-label="Cabinet Dreams home">
+      <span class="logo-c">C</span><span class="logo-d">D</span>
+    </a>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="members.html">Members</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button id="themeToggle" class="btn ghost" aria-label="Toggle light/dark mode">☾</button>
+    </div>
+  </header>
+
+  <main class="page projects-page">
+    <h1 class="page-title">Projects</h1>
+
+    <!-- Cabinet shelves layout -->
+    <section class="shelves">
+      <h2>Ongoing Projects</h2>
+      <div class="shelf">
+        <article class="card project" data-status="Ongoing">
+          <div class="card-media shimmer"></div>
+          <div class="card-body">
+            <h3>Internship Assessment System (IAS)</h3>
+            <p>A web platform to track interns, mentors, and deliverables with analytics dashboards.</p>
+            <span class="status pill">Ongoing</span>
+          </div>
+        </article>
+
+        <article class="card project" data-status="Ongoing">
+          <div class="card-media shimmer"></div>
+          <div class="card-body">
+            <h3>Cabinet Dreams Portfolio</h3>
+            <p>The very site you're browsing — built with a dreamy, modern aesthetic and smooth animations.</p>
+            <span class="status pill">Ongoing</span>
+          </div>
+        </article>
+      </div>
+
+      <h2>Future Projects</h2>
+      <div class="shelf future">
+        <article class="card slot">
+          <div class="slot-dash">+</div>
+          <div class="card-body">
+            <h3>Coming Soon</h3>
+            <p>Reserved space for our next big idea.</p>
+            <span class="status pill hollow">TBD</span>
+          </div>
+        </article>
+        <article class="card slot">
+          <div class="slot-dash">+</div>
+          <div class="card-body">
+            <h3>Coming Soon</h3>
+            <p>Reserved space for our next big idea.</p>
+            <span class="status pill hollow">TBD</span>
+          </div>
+        </article>
+        <article class="card slot">
+          <div class="slot-dash">+</div>
+          <div class="card-body">
+            <h3>Coming Soon</h3>
+            <p>Reserved space for our next big idea.</p>
+            <span class="status pill hollow">TBD</span>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-left">
+      <small>All Rights Reserved © Cabinet Dreams <span data-year></span></small>
+      <div class="contact-inline">
+        <a href="mailto:abonitaronin@gmail.com">abonitaronin@gmail.com</a>
+        <span aria-hidden>•</span>
+        <a href="tel:+639615189791">+63 961 518 9791</a>
+      </div>
+    </div>
+    <div class="footer-right">
+      <div class="socials">
+        <a aria-label="Facebook" href="#" class="icon fb"></a>
+        <a aria-label="Instagram" href="#" class="icon ig"></a>
+        <a aria-label="X" href="#" class="icon tw"></a>
+        <a aria-label="GitHub" href="#" class="icon gh"></a>
+      </div>
+      <button class="btn ghost" data-open-contact>Contact Us</button>
+    </div>
+  </footer>
+
+  <div class="modal" id="contactModal" aria-hidden="true" role="dialog" aria-modal="false">
+    <div class="modal-card">
+      <button class="modal-close" data-close>×</button>
+      <h2>Contact Cabinet Dreams</h2>
+      <form class="form" id="contactFormModal">
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" required placeholder="Your name" />
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" required placeholder="you@example.com" />
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea name="message" rows="4" required placeholder="Tell us what you dream of…"></textarea>
+        </label>
+        <button type="submit" class="btn primary">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+<!--adsdasdhgasd-->
