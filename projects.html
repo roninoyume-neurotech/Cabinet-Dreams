@@ -6,9 +6,10 @@
   <title>Cabinet Dreams — Projects</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="sky-layer"></div>
   <div class="bg-gradient"></div>
   <div id="particles"></div>
 
@@ -32,24 +33,32 @@
   <main class="page projects-page">
     <h1 class="page-title">Projects</h1>
 
-    <!-- Cabinet shelves layout -->
     <section class="shelves">
       <h2>Ongoing Projects</h2>
-      <div class="shelf">
-        <article class="card project" data-status="Ongoing">
+      <div class="shelf" id="projectShelf">
+        <article class="card project" data-status="Ongoing" data-project="RIAS Website" tabindex="0">
           <div class="card-media shimmer"></div>
           <div class="card-body">
-            <h3>Internship Assessment System (IAS)</h3>
-            <p>A web platform to track interns, mentors, and deliverables with analytics dashboards.</p>
+            <h3>RIAS Website</h3>
+            <p>Responsive site with analytics, content tools, and a cinematic UI.</p>
             <span class="status pill">Ongoing</span>
           </div>
         </article>
 
-        <article class="card project" data-status="Ongoing">
+        <article class="card project" data-status="Ongoing" data-project="Roblox Game (Space Ships)" tabindex="0">
           <div class="card-media shimmer"></div>
           <div class="card-body">
-            <h3>Cabinet Dreams Portfolio</h3>
-            <p>The very site you're browsing — built with a dreamy, modern aesthetic and smooth animations.</p>
+            <h3>Roblox Game (Space Ships)</h3>
+            <p>Multiplayer dogfights with modular ships and reactive nebulae.</p>
+            <span class="status pill">Ongoing</span>
+          </div>
+        </article>
+
+        <article class="card project" data-status="Ongoing" data-project="Ramon Manga" tabindex="0">
+          <div class="card-media shimmer"></div>
+          <div class="card-body">
+            <h3>Ramon Manga</h3>
+            <p>Interactive manga viewer with panel transitions and ambient audio.</p>
             <span class="status pill">Ongoing</span>
           </div>
         </article>
@@ -57,14 +66,6 @@
 
       <h2>Future Projects</h2>
       <div class="shelf future">
-        <article class="card slot">
-          <div class="slot-dash">+</div>
-          <div class="card-body">
-            <h3>Coming Soon</h3>
-            <p>Reserved space for our next big idea.</p>
-            <span class="status pill hollow">TBD</span>
-          </div>
-        </article>
         <article class="card slot">
           <div class="slot-dash">+</div>
           <div class="card-body">
@@ -118,7 +119,7 @@
           <span>Email</span>
           <input type="email" name="email" required placeholder="you@example.com" />
         </label>
-        <label>
+        <label class="full">
           <span>Message</span>
           <textarea name="message" rows="4" required placeholder="Tell us what you dream of…"></textarea>
         </label>
@@ -130,5 +131,4 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-<!--adsdasdhgasd-->
+<!--fsadfjsdkf-->

@@ -6,11 +6,13 @@
   <title>Cabinet Dreams — Home</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/CDlogo.png">
 
 </head>
 <body>
-  <!-- Dreamy backdrop -->
+  <!-- Dynamic sky: stars (dark) / clouds (light) -->
+  <div class="sky-layer"></div>
   <div class="bg-gradient"></div>
   <div id="particles"></div>
 
@@ -33,12 +35,18 @@
 
   <main class="hero">
     <!-- Animated Central CD Logo -->
-    <div class="cd-logo" aria-label="Cabinet Dreams animated logo">
+    <button class="cd-logo" id="doorTrigger" aria-label="Open About section">
+      <!-- C: vinyl -->
       <div class="cd-c" title="C rotates like a vinyl"></div>
-      <div class="cd-d" title="D opens like a door">
-        <div class="door"></div>
+
+      <!-- D: curved door -->
+      <div class="cd-d" title="Click to open door">
+        <div class="door-arch">
+          <div class="door-panel"></div>
+        </div>
       </div>
-    </div>
+      <span class="hint">Click the D-door</span>
+    </button>
 
     <h1 class="hero-title">Cabinet Dreams</h1>
     <p class="hero-sub">Dreamy. Modern. Cinematic builds — from code to creative.</p>
@@ -49,9 +57,49 @@
     </div>
   </main>
 
+  <!-- ABOUT: revealed via curved D-door -->
+  <section id="about" class="about-section" aria-hidden="true">
+    <div class="about-wrap glass">
+      <h2>About Cabinet Dreams</h2>
+      <p>
+        We are a studio of engineers and designers crafting cinematic, interactive experiences —
+        websites, games, tools, and visual stories. Our work blends modern UI with a dreamy,
+        whimsical twist that still feels professional and smooth.
+      </p>
+      <div class="about-grid">
+        <div class="about-card">
+          <h3>What We Do</h3>
+          <ul>
+            <li>Web & interface engineering</li>
+            <li>Game & interactive prototyping</li>
+            <li>Brand, motion & visual design</li>
+          </ul>
+        </div>
+        <div class="about-card">
+          <h3>Our Vision</h3>
+          <p>
+            Build delightful products that feel like a lucid dream:
+            futuristic, intuitive, and memorable — without the friction.
+          </p>
+        </div>
+        <div class="about-card">
+          <h3>Approach</h3>
+          <p>
+            Clean, Netflix-inspired layouts with playful motion, glassmorphism,
+            and glowing details — optimized for speed and accessibility.
+          </p>
+        </div>
+      </div>
+      <div class="about-cta">
+        <a href="projects.html" class="btn primary">Explore Projects</a>
+        <a href="contact.html" class="btn">Work With Us</a>
+      </div>
+    </div>
+  </section>
+
   <footer class="site-footer">
     <div class="footer-left">
-      <small id="copyright">All Rights Reserved © Cabinet Dreams <span data-year></span></small>
+      <small>All Rights Reserved © Cabinet Dreams <span data-year></span></small>
       <div class="contact-inline">
         <a href="mailto:abonitaronin@gmail.com">abonitaronin@gmail.com</a>
         <span aria-hidden>•</span>
@@ -69,7 +117,7 @@
     </div>
   </footer>
 
-  <!-- Contact Modal -->
+  <!-- Global Contact Modal -->
   <div class="modal" id="contactModal" aria-hidden="true" role="dialog" aria-modal="false">
     <div class="modal-card">
       <button class="modal-close" data-close>×</button>
@@ -83,7 +131,7 @@
           <span>Email</span>
           <input type="email" name="email" required placeholder="you@example.com" />
         </label>
-        <label>
+        <label class="full">
           <span>Message</span>
           <textarea name="message" rows="4" required placeholder="Tell us what you dream of…"></textarea>
         </label>
@@ -92,10 +140,6 @@
     </div>
   </div>
 
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-
-
-<!-- --- IGNOR,E as-asddfgdfgdfg-n- -->

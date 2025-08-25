@@ -6,9 +6,10 @@
   <title>Cabinet Dreams — Members</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="sky-layer"></div>
   <div class="bg-gradient"></div>
   <div id="particles"></div>
 
@@ -34,46 +35,45 @@
 
     <section class="orbit">
       <h2>Founders</h2>
-      <div class="orbit-ring">
-        <div class="orb person" tabindex="0">
+      <div class="orbit-ring no-shift">
+        <button class="orb person" data-name="Ronin Abonita" data-role="Founder • Engineering"
+          data-bio="Computer Engineering student; full-stack, graphics, and systems." type="button">
           <div class="avatar">RA</div>
           <h3>Ronin Abonita</h3>
           <p class="role">Founder • Engineering</p>
-          <div class="bio">Computer Engineering student; full-stack, graphics, and systems.</div>
-        </div>
-        <div class="orb person" tabindex="0">
+        </button>
+
+        <button class="orb person" data-name="Key Member" data-role="Co-Founder • Product"
+          data-bio="Product strategy, UX writing, and user research." type="button">
           <div class="avatar">KY</div>
           <h3>Key Member</h3>
           <p class="role">Co-Founder • Product</p>
-          <div class="bio">Product strategy, UX writing, and user research.</div>
-        </div>
-        <div class="orb person" tabindex="0">
+        </button>
+
+        <button class="orb person" data-name="Alex Doe" data-role="Co-Founder • Design"
+          data-bio="Visual design, brand, and motion." type="button">
           <div class="avatar">AD</div>
           <h3>Alex Doe</h3>
           <p class="role">Co-Founder • Design</p>
-          <div class="bio">Visual design, brand, and motion.</div>
-        </div>
-        <div class="orb person" tabindex="0">
+        </button>
+
+        <button class="orb person" data-name="Jamie Moon" data-role="Co-Founder • Ops"
+          data-bio="Delivery, partnerships, and community." type="button">
           <div class="avatar">JM</div>
           <h3>Jamie Moon</h3>
           <p class="role">Co-Founder • Ops</p>
-          <div class="bio">Delivery, partnerships, and community.</div>
-        </div>
+        </button>
       </div>
 
       <h2>Members</h2>
-      <div class="orbit-grid">
-        <div class="orb person" tabindex="0">
+      <div class="orbit-grid no-shift">
+        <button class="orb person" data-name="Member Name" data-role="Developer"
+          data-bio="Frontend and data viz enthusiast." type="button">
           <div class="avatar">MN</div>
           <h3>Member Name</h3>
           <p class="role">Developer</p>
-          <div class="bio">Frontend and data viz enthusiast.</div>
-        </div>
-        <div class="orb slot"><span>+</span></div>
-        <div class="orb slot"><span>+</span></div>
-        <div class="orb slot"><span>+</span></div>
-        <div class="orb slot"><span>+</span></div>
-        <div class="orb slot"><span>+</span></div>
+        </button>
+        <!-- (No "+" add slots; admin-only adds) -->
       </div>
     </section>
   </main>
@@ -98,6 +98,17 @@
     </div>
   </footer>
 
+  <!-- Member Modal -->
+  <div class="modal" id="memberModal" aria-hidden="true" role="dialog" aria-modal="false">
+    <div class="modal-card">
+      <button class="modal-close" data-close>×</button>
+      <h2 id="mmName">Member Name</h2>
+      <p class="muted" id="mmRole">Role</p>
+      <p id="mmBio">Short bio text.</p>
+    </div>
+  </div>
+
+  <!-- Global Contact Modal -->
   <div class="modal" id="contactModal" aria-hidden="true" role="dialog" aria-modal="false">
     <div class="modal-card">
       <button class="modal-close" data-close>×</button>
@@ -111,7 +122,7 @@
           <span>Email</span>
           <input type="email" name="email" required placeholder="you@example.com" />
         </label>
-        <label>
+        <label class="full">
           <span>Message</span>
           <textarea name="message" rows="4" required placeholder="Tell us what you dream of…"></textarea>
         </label>
@@ -123,4 +134,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-<!--fsadfjsdkf-->
