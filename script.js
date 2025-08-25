@@ -147,23 +147,3 @@ wireContactForms();
     }
   });
 })();
-// ===== Wire contact forms (if any on this page) =====
-function wireContactForms(){
-  const forms = document.querySelectorAll('form[data-contact]');
-  forms.forEach(form => {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      // Handle form submission
-    });
-  });
-}
-wireContactForms();
-
-// ===== Subtle background drift =====
-(function animateParticles(){
-  const el = document.getElementById('particles');
-  if(!el) return;
-  let t = 0;
-  function step(){ t += 0.0025; el.style.transform = `translateY(${Math.sin(t)*4}px)`; requestAnimationFrame(step); }
-  requestAnimationFrame(step);
-})();
