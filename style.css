@@ -4,7 +4,7 @@
   --text: #e9eef6;
   --muted: #a5b1c2;
   --card: rgba(255,255,255,0.06);
-  --glass: rgba(255,255,255,0.12);
+  --glass: rgba(255,255,255,0.17);
   --accent: #7aa2ff;
   --accent-2: #b388ff;
   --ring: rgba(122,162,255,0.45);
@@ -17,7 +17,7 @@
   --text:#0f1728;
   --muted:#536177;
   --card: rgba(0,0,0,0.04);
-  --glass: rgba(255,255,255,0.7);
+  --glass: rgba(255,255,255,0.12);
   --accent:#3b6fff;
   --accent-2:#7b61ff;
   --ring: rgba(59,111,255,0.35);
