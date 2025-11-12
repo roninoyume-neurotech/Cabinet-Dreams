@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Ronin's Dream Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Panel -->
+        <aside class="left-panel">
+            <div class="hero-section">
+                <h1 class="name">Ronin Abonita</h1>
+                <p class="tagline">Dreamer • Artist • Creator</p>
+            </div>
+            
+            <nav class="navigation">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#portfolio" class="nav-link">Portfolio</a>
+                <a href="index.html#dreams" class="nav-link">Dream Notes</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </nav>
+            
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <span class="sun-icon">☀️</span>
+                <span class="moon-icon">🌙</span>
+            </button>
+        </aside>
+
+        <!-- Right Panel -->
+        <main class="right-panel">
+            <section class="content-section active">
+                <div class="contact-container">
+                    <h2>Get in Touch</h2>
+                    <p class="contact-intro">Have a project in mind? Want to collaborate? Or just want to say hello? Drop me a message!</p>
+                    
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+
+                    <div id="confirmationMessage" class="confirmation-message hidden">
+                        <div class="confirmation-icon">✓</div>
+                        <h3>Message Sent Successfully!</h3>
+                        <p>Thank you for reaching out. I'll get back to you soon.</p>
+                        <a href="index.html" class="back-home-btn">Back to Home</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Contact form specific functionality
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Simulate form submission
+            console.log('Form submitted:', { name, email, message });
+            
+            // Hide form and show confirmation
+            document.querySelector('.contact-form').style.display = 'none';
+            document.querySelector('.contact-intro').style.display = 'none';
+            document.getElementById('confirmationMessage').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>

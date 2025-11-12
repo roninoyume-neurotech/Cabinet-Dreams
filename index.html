@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ronin's Dream Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Panel -->
+        <aside class="left-panel">
+            <div class="hero-section">
+                <h1 class="name">Ronin Abonita</h1>
+                <p class="tagline">Dreamer • Artist • Creator</p>
+            </div>
+            
+            <nav class="navigation">
+                <a href="#home" class="nav-link active" data-section="home">Home</a>
+                <a href="#portfolio" class="nav-link" data-section="portfolio">Portfolio</a>
+                <a href="#dreams" class="nav-link" data-section="dreams">Dream Notes</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <span class="sun-icon">☀️</span>
+                <span class="moon-icon">🌙</span>
+            </button>
+        </aside>
+
+        <!-- Right Panel -->
+        <main class="right-panel">
+            <!-- Home Section -->
+            <section id="home" class="content-section active">
+                <div class="welcome-content">
+                    <h2>Welcome to My Dream Space</h2>
+                    <p>This is where creativity meets imagination. Explore my artworks, dive into my dreams, and feel free to reach out.</p>
+                    <div class="feature-cards">
+                        <div class="feature-card">
+                            <div class="feature-icon">🎨</div>
+                            <h3>Portfolio</h3>
+                            <p>Discover my artistic journey through visual creations</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">💭</div>
+                            <h3>Dream Notes</h3>
+                            <p>Peek into the stories that unfold in my sleep</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">✉️</div>
+                            <h3>Connect</h3>
+                            <p>Let's collaborate and create something amazing</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Portfolio Section -->
+            <section id="portfolio" class="content-section">
+                <div class="section-header">
+                    <h2>My Portfolio</h2>
+                    <label for="imageUpload" class="upload-btn">
+                        + Upload Artwork
+                        <input type="file" id="imageUpload" accept="image/*" hidden>
+                    </label>
+                </div>
+                <div id="portfolioGrid" class="portfolio-grid">
+                    <!-- Images will be dynamically loaded here -->
+                </div>
+                <div id="emptyPortfolio" class="empty-state">
+                    <p>No artworks yet. Upload your first creation!</p>
+                </div>
+            </section>
+
+            <!-- Dream Notes Section -->
+            <section id="dreams" class="content-section">
+                <div class="section-header">
+                    <h2>Dream Notes</h2>
+                </div>
+                
+                <div class="dream-input-container">
+                    <input type="text" id="dreamTitle" placeholder="Dream Title" class="dream-title-input">
+                    <textarea id="dreamContent" placeholder="Describe your dream..." class="dream-textarea"></textarea>
+                    <button id="saveDream" class="save-btn">Save Dream</button>
+                </div>
+
+                <div id="dreamsList" class="dreams-list">
+                    <!-- Dreams will be dynamically loaded here -->
+                </div>
+                <div id="emptyDreams" class="empty-state">
+                    <p>No dreams recorded yet. Start capturing your nocturnal adventures!</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
